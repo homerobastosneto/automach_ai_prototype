@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #0a0a0a;
+  color: white;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+}
+
+.neon-glow {
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+.orange-glow {
+  box-shadow: 0 0 15px rgba(255, 107, 0, 0.4);
+}
+
+@keyframes holographic {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.holographic-seal {
+  background: linear-gradient(45deg, #00f2ff, #ff6b00, #00f2ff);
+  background-size: 200% 200%;
+  animation: holographic 3s ease infinite;
+}
